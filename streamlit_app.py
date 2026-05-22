@@ -8,6 +8,11 @@ st.write(
 
 number = st.number_input(
     "masukan nomor panjang", value=None, placeholder="Type a number..."
+
+number = st.number_input(
+    "masukan nomor lebar", value=None, placeholder="Type a number..."
+)
+    
 )
 st.write("The current number is ", number)
 
