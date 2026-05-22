@@ -7,7 +7,7 @@ st.write(
 
 
 number = st.number_input(
-    "masukan nomor panjang" value=None, placeholder="Type a number..."
+    "masukan nomor panjang", value=None, placeholder="Type a number..."
 )
 st.write("The current number is ", number)
 
