@@ -4,6 +4,13 @@ import streamlit as st
 st.title("🧮 Kalkulator Sederhana")
 st.write("Aplikasi kalkulator menggunakan Python dan Streamlit")
 
+
+# Nama pembuat
+st.markdown("### 👨‍💻 Aplikasi dibuat oleh Agung")
+
+
+
+
 # Input angka
 angka1 = st.number_input("Masukkan angka pertama", value=0.0)
 angka2 = st.number_input("Masukkan angka kedua", value=0.0)
