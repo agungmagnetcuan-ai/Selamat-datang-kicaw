@@ -1,18 +1,40 @@
 import streamlit as st
 
-st.title("🎈 My new appp agung")
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
+# Judul aplikasi
+st.title("🧮 Kalkulator Sederhana")
+st.write("Aplikasi kalkulator menggunakan Python dan Streamlit")
+
+# Input angka
+angka1 = st.number_input("Masukkan angka pertama", value=0.0)
+angka2 = st.number_input("Masukkan angka kedua", value=0.0)
+
+# Pilihan operator
+operator = st.selectbox(
+    "Pilih operasi",
+    ("Penjumlahan (+)", "Pengurangan (-)", "Perkalian (*)", "Pembagian (/)")
 )
 
+# Tombol hitung
+if st.button("Hitung"):
 
-number = st.number_input(
-    "masukan nomor panjang", value=None, placeholder="Type a number..."
+    if operator == "Penjumlahan (+)":
+        hasil = angka1 + angka2
+        st.success(f"Hasil: {angka1} + {angka2} = {hasil}")
 
-number = st.number_input(
-    "masukan nomor lebar", value=None, placeholder="Type a number..."
-)
-st.write("The current number is ", number)
+    elif operator == "Pengurangan (-)":
+        hasil = angka1 - angka2
+        st.success(f"Hasil: {angka1} - {angka2} = {hasil}")
+
+    elif operator == "Perkalian (*)":
+        hasil = angka1 * angka2
+        st.success(f"Hasil: {angka1} × {angka2} = {hasil}")
+
+    elif operator == "Pembagian (/)":
+        if angka2 != 0:
+            hasil = angka1 / angka2
+            st.success(f"Hasil: {angka1} ÷ {angka2} = {hasil}")
+        else:
+            st.error("Error: Tidak bisa dibagi dengan nol!")
 
 
 
